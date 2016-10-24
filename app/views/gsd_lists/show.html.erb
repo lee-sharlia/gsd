@@ -1,0 +1,18 @@
+<p id="notice"><%= notice %></p>
+
+<h2 class="gsd_list_title"><%= @gsd_list.title %></h2>
+<p class="gsd_list_sub_title"><%= @gsd_list.description %></p>
+
+<div id="gsd_items_wrapper">
+	<%= render @gsd_list.gsd_items %>
+	<div id="form">
+		<%= render "gsd_items/form" %>
+	</div>
+</div>
+
+<div class="links">
+	<%= link_to 'Edit', edit_gsd_list_path(@gsd_list) %> |
+	<%= link_to 'Delete', gsd_list_path(@gsd_list), method: :delete, data: { confirm: "Are you sure?" }
+ %> |
+  <%= link_to 'Back', gsd_lists_path %>
+</div>

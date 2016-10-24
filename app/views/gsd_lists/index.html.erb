@@ -1,0 +1,12 @@
+<header class=""></header>
+
+<% @gsd_lists.each do |gsd_list| %>
+  <div class="index_row clearfix">
+    <h2 class="gsd_list_title"><%= link_to gsd_list.title, gsd_list %></h2>
+    <p class="gsd_list_sub_title"><%= gsd_list.description %></p>
+  </div>
+<% end %>
+
+<div class="links">
+  <%= link_to "On a roll? Get even more shit done- create a new list!", new_gsd_list_path %>
+</div>
